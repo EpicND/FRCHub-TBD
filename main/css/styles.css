@@ -98,12 +98,18 @@ body, html {
     overflow: hidden;
     outline:none;
     color:white;
-    width:20%;
     transition-duration: 0.4s;
+    min-width:30%;
+    width:0%;
+    transition:width .8s ease;
+}
+
+.expanded {
+    width:auto !important;
 }
 
 #adj-button:hover {
-  width:30%;
+  width:40%;
   color: #ddd;
 }
 
