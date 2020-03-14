@@ -12,8 +12,10 @@ $(document).ready(function() {
     $(".subheading-container").animate({opacity:1}, 1000);
       setTimeout(function () {
       $(".section-1").animate({opacity:1}, 1000);
+      $(".subbtn-container").animate({opacity:1}, 3000);
+
       }, 500);
-  }, 500);
+  }, 1000);
 
 });
 
