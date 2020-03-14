@@ -1,0 +1,233 @@
+/* IMPORTS */
+
+@import url('https://fonts.googleapis.com/css?family=Tomorrow&display=swap');
+
+/* GENEREAL */
+
+body, html {
+  height:100%;
+  margin:0px;
+}
+
+/* CLASSES */
+.load {
+  background-color: #0e1111;
+  height:100%;
+  width:100%;
+  position: relative;
+}
+
+.title {
+  font-size: 15vw;
+  font-family: 'Tomorrow', sans-serif;
+  color:white;
+}
+
+.title-container {
+  width:100%;
+}
+
+.subbtn-container {
+  width:100%;
+}
+
+
+
+.subheading {
+  font-size: 2vw;
+  color: #605052;
+  font-family: 'Roboto';
+  font-weight: bold;
+}
+
+.subheading-container {
+  width:100%;
+}
+
+.team-number-input {
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-label {
+  color:white;
+  font-family: 'Roboto';
+}
+
+.OSH {
+  /* On Start Hidden */
+  opacity: 0;
+}
+/* Only purpose of load-container is for vertical centering*/
+.load-container {
+  width:100%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+.inline-centering {
+    text-align: center !important;
+}
+
+
+/* IDS */
+
+#adj-button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color:white;
+    width:20%;
+    transition-duration: 0.4s;
+}
+
+#adj-button:hover {
+  width:30%;
+  color: #ddd;
+}
+
+/* SPECIAL */
+
+
+
+/* EVERYTHING FOR FANCY INPUT */
+
+.section-1 {
+  width: 100%;
+  padding: 25px 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input:focus {
+  outline: none;
+}
+
+.expl-3 {
+  display: block;
+  position: relative;
+  width: 50%;
+  margin: 20px auto;
+}
+
+.input-3 {
+  position: relative;
+  display: block;
+  width: 100%;
+  border: 0;
+  text-align: center;
+  padding: 10px;
+  font-size: 24px;
+  box-sizing: border-box;
+  background: transparent;
+  color: #FFFFFF;
+  line-height: 1.8em;
+}
+
+.label-3 {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3em;
+  font-size: 1.5em;
+  transition: 0.6s;
+  pointer-events: none;
+}
+
+.label-3::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 2.5em;
+  border: 4px solid red;
+  border-top: 4px solid #ddd;
+  border-right: 4px solid #ddd;
+  border-bottom: 4px solid #ddd;
+  border-left: none;
+  transition: 0.6s;
+}
+.label-3::before {
+  content: "";
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 2.5em;
+  background: #transparent;
+  border-top: 4px solid #ddd;
+  border-left: 4px solid #ddd;
+  border-bottom: 4px solid #ddd;
+  border-right: none;
+  transition: 0.6s;
+}
+
+.content-3 {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  transition: 0.6s;
+  line-height: 3em;
+  color:#FFFFFF;
+}
+
+.input-3:focus + .label-3 .content-3,
+.filled .label-3 .content-3 {
+  animation: anim-3 0.6s forwards;
+}
+
+.input-3:focus + .label-3::before,
+.filled .label-3::before {
+  left: -2%;
+  border-color: #be0071;
+  transition-delay: 0.6s;
+}
+
+.input-3:focus + .label-3::after,
+.filled .label-3::after {
+  right: -2%;
+  border-color: #be0071;
+  transition-delay: 0.6s;
+}
+
+@keyframes anim-3 {
+  50% {
+    opacity: 0;
+    transform: scale3d(0.2, 0.2, 1);
+  }
+  51% {
+    opacity: 0;
+    top: 0;
+    transform: scale3d(0.2, 0.2, 1);
+  }
+  52% {
+    opacity: 1;
+    top: -50px;
+    transform: scale3d(0.2, 0.2, 1);
+  }
+  100% {
+    opacity: 1;
+    top: -50px;
+    transform: scale3d(1, 1, 1);
+  }
+}
