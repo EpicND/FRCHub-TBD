@@ -74,6 +74,20 @@ body, html {
     text-align: center !important;
 }
 
+.copyright{
+  color:#586069;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  /* margin-bottom: 2px; */
+  font-size: 10px;
+}
+
+.copyright-container {
+  width:100%;
+  position: absolute;
+  bottom: 10px;
+  /* width: 50%; */
+  /* border: 3px solid #8AC007; */
+}
 
 /* IDS */
 
