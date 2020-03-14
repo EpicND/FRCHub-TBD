@@ -1,2 +1,2 @@
 # FRCHub
-A website dedicated to information built around you and your team
+A website dedicated to information built around you and your team with advanced statistics
