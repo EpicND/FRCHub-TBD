@@ -3,6 +3,8 @@ window.onload = startup();
 
 function startup() {
   $(".load-container").hide();
+		$('.firebaseui-auth-container').hide();
+  $('.loader').hide();
 }
 
 $(document).ready(function() {
@@ -96,5 +98,3 @@ $(document).ready(function() {
     }
   });
 });
-
-
