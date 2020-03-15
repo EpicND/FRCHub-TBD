@@ -1,4 +1,5 @@
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
+const auth = firebase.auth();
 
 var uiConfig = {
   callbacks: {
@@ -28,3 +29,19 @@ var uiConfig = {
   // Privacy policy url.
   privacyPolicyUrl: '<your-privacy-policy-url>'
 };
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+      console.log("Successfully signed in with email " + user.email)
+      document.getElementById('email').innerHTML = "Signed in as " + user.email;
+      ui.stop();
+  } else {
+    // No user is signed in.
+      document.getElementById('email').innerHTML = "No user Signed In"
+      ui.start('#firebaseui-auth-container', uiConfig);
+  }
+});
+
+function signOut() {
+    auth.signOut();
+}

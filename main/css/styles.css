@@ -273,3 +273,17 @@ form {
 .mdl-textfield__label {
     color: lightgray;
 }
+.firebaseui-text {
+    color: white;
+}
+.firebaseui-subtitle {
+    color: white;
+}
+.email {
+    color: lightgray;
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+.email:hover {
+    text-decoration: underline;
+}
