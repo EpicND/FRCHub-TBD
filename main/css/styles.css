@@ -4,26 +4,18 @@
 
 /* GENEREAL */
 
-html {
-   margin: 0px;
-   min-height: 100%;
-   width: 100%;
+body, html {
+  height:100%;
+  margin:0px;
 }
 
-body {
-   background-color: #0e1111;
-   margin: 0px;
-   min-height: 100%;
-    height:inherit;
-   width: 100%;
-}
-
-footer, .copyright-container {
- position: absolute;
- bottom: 0;
- width: 100%;
-}
 /* CLASSES */
+.load {
+  background-color: #0e1111;
+  height:100%;
+  width:100%;
+  position: relative;
+}
 
 .title {
   font-size: 15vw;
@@ -32,7 +24,6 @@ footer, .copyright-container {
 }
 
 .title-container {
-    margin-top:30vh;
   width:100%;
 }
 
@@ -40,18 +31,14 @@ footer, .copyright-container {
   width:100%;
 }
 
-.firebaseui-tos {
-/*    margin-bottom:20px;*/
-}
+
 
 .subheading {
-  font-size: 2vw4;
+  font-size: 2vw;
   color: #605052;
   font-family: 'Roboto';
   font-weight: bold;
 }
-
-
 
 .subheading-container {
   width:100%;
@@ -72,9 +59,8 @@ footer, .copyright-container {
   /* On Start Hidden */
   opacity: 0;
 }
-
-
-body {
+/* Only purpose of load-container is for vertical centering*/
+.load-container {
   width:100%;
   margin: 0;
   position: absolute;
@@ -82,7 +68,6 @@ body {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-
 
 
 .inline-centering {
@@ -97,13 +82,12 @@ body {
 }
 
 .copyright-container {
-/*    top:10px;*/
   width:100%;
   position: absolute;
-/*  margin-top: 10px;*/
-  margin-bottom: 2px;
+  bottom: 10px;
+  /* width: 50%; */
+  /* border: 3px solid #8AC007; */
 }
-
 
 /* IDS */
 
@@ -127,10 +111,6 @@ body {
 #adj-button:hover {
   width:40%;
   color: #ddd;
-}
-
-#firebaseui-auth-container {
-    margin-bottom:40px;
 }
 
 /* SPECIAL */
