@@ -4,18 +4,26 @@
 
 /* GENEREAL */
 
-body, html {
-  height:100%;
-  margin:0px;
+html {
+   margin: 0px;
+   min-height: 100%;
+   width: 100%;
 }
 
-/* CLASSES */
-.load {
-  background-color: #0e1111;
-  height:100%;
-  width:100%;
-  position: relative;
+body {
+   background-color: #0e1111;
+   margin: 0px;
+   min-height: 100%;
+    height:inherit;
+   width: 100%;
 }
+
+footer, .copyright-container {
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+}
+/* CLASSES */
 
 .title {
   font-size: 15vw;
@@ -24,6 +32,7 @@ body, html {
 }
 
 .title-container {
+    margin-top:30vh;
   width:100%;
 }
 
@@ -31,14 +40,18 @@ body, html {
   width:100%;
 }
 
-
+.firebaseui-tos {
+/*    margin-bottom:20px;*/
+}
 
 .subheading {
-  font-size: 2vw;
+  font-size: 2vw4;
   color: #605052;
   font-family: 'Roboto';
   font-weight: bold;
 }
+
+
 
 .subheading-container {
   width:100%;
@@ -59,8 +72,9 @@ body, html {
   /* On Start Hidden */
   opacity: 0;
 }
-/* Only purpose of load-container is for vertical centering*/
-.load-container {
+
+
+body {
   width:100%;
   margin: 0;
   position: absolute;
@@ -68,7 +82,6 @@ body, html {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-
 
 .inline-centering {
     text-align: center !important;
@@ -82,12 +95,13 @@ body, html {
 }
 
 .copyright-container {
+/*    top:10px;*/
   width:100%;
   position: absolute;
-  bottom: 10px;
-  /* width: 50%; */
-  /* border: 3px solid #8AC007; */
+/*  margin-top: 10px;*/
+  margin-bottom: 2px;
 }
+
 
 /* IDS */
 
@@ -111,6 +125,10 @@ body, html {
 #adj-button:hover {
   width:40%;
   color: #ddd;
+}
+
+#firebaseui-auth-container {
+    margin-bottom:40px;
 }
 
 /* SPECIAL */
@@ -251,7 +269,6 @@ input:focus {
     transform: scale3d(1, 1, 1);
   }
 }
-/*
 form {
     background-color: #0e1111;
 }
@@ -288,7 +305,3 @@ form {
 .email:hover {
     text-decoration: underline;
 }
-.firebaseui-id-page-password-recovery-email-sent {
-    background-color: #1b91d1;
-}
-*/
