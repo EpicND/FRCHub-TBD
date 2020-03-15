@@ -91,3 +91,7 @@ $(document).ready(function() {
     }
   });
 });
+
+$(document).ready(function() {
+    ui.start('#firebaseui-auth-container', uiConfig);
+})

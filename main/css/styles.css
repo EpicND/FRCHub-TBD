@@ -251,3 +251,25 @@ input:focus {
     transform: scale3d(1, 1, 1);
   }
 }
+form {
+    background-color: #0e1111;
+}
+.firebaseui-title {
+    color: lightgray;
+}
+.firebaseui-id-submit  {
+    background-color: #1b91d1;
+}
+
+.mdl-button--colored {
+    background-color: #1b91d1;
+}
+.firebaseui-input {
+    color: white;
+}
+.mdl-textfield--floating-label {
+    color: lightgray;
+}
+.mdl-textfield__label {
+    color: lightgray;
+}
