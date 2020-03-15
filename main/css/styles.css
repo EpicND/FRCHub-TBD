@@ -251,6 +251,7 @@ input:focus {
     transform: scale3d(1, 1, 1);
   }
 }
+/*
 form {
     background-color: #0e1111;
 }
@@ -287,3 +288,7 @@ form {
 .email:hover {
     text-decoration: underline;
 }
+.firebaseui-id-page-password-recovery-email-sent {
+    background-color: #1b91d1;
+}
+*/
