@@ -1,8 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title> Scoultimate </title>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
 
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDyqWMuRtuH6p9f0dfne6XkBlV3wszJKMo",
+    authDomain: "scoultimate.firebaseapp.com",
+    databaseURL: "https://scoultimate.firebaseio.com",
+    projectId: "scoultimate",
+    storageBucket: "scoultimate.appspot.com",
+    messagingSenderId: "640701949151",
+    appId: "1:640701949151:web:925d5001cfd2251481f56a",
+    measurementId: "G-BGM4E4GB1B"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+      <title> Scoultimate </title>
+      <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+      <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
       <link href="main/css/styles.css" rel="stylesheet" />
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
