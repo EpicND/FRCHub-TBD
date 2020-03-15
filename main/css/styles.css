@@ -4,18 +4,20 @@
 
 /* GENEREAL */
 
-body, html {
-  height:100%;
-  margin:0px;
+html {
+   margin: 0px;
+   height: 100%;
+   width: 100%;
+}
+
+body {
+    background-color: #0e1111;
+   margin: 0px;
+   min-height: 100%;
+   width: 100%;
 }
 
 /* CLASSES */
-.load {
-  background-color: #0e1111;
-  height:100%;
-  width:100%;
-  position: relative;
-}
 
 .title {
   font-size: 15vw;
@@ -24,6 +26,7 @@ body, html {
 }
 
 .title-container {
+    margin-top:50vh;
   width:100%;
 }
 
@@ -31,7 +34,9 @@ body, html {
   width:100%;
 }
 
-
+.firebaseui-tos {
+    margin-bottom:50px;
+}
 
 .subheading {
   font-size: 2vw;
