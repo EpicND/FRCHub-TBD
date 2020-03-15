@@ -18,6 +18,11 @@ body {
    width: 100%;
 }
 
+footer, .copyright-container {
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+}
 /* CLASSES */
 
 .title {
@@ -27,7 +32,7 @@ body {
 }
 
 .title-container {
-    margin-top:50vh;
+    margin-top:30vh;
   width:100%;
 }
 
@@ -36,15 +41,17 @@ body {
 }
 
 .firebaseui-tos {
-    margin-bottom:50px;
+/*    margin-bottom:20px;*/
 }
 
 .subheading {
-  font-size: 2vw;
+  font-size: 2vw4;
   color: #605052;
   font-family: 'Roboto';
   font-weight: bold;
 }
+
+
 
 .subheading-container {
   width:100%;
@@ -88,10 +95,13 @@ body {
 }
 
 .copyright-container {
+/*    top:10px;*/
   width:100%;
   position: absolute;
-  bottom: 10px;
+/*  margin-top: 10px;*/
+  margin-bottom: 2px;
 }
+
 
 /* IDS */
 
@@ -115,6 +125,10 @@ body {
 #adj-button:hover {
   width:40%;
   color: #ddd;
+}
+
+#firebaseui-auth-container {
+    margin-bottom:40px;
 }
 
 /* SPECIAL */
