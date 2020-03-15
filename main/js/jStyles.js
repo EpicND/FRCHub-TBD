@@ -15,8 +15,12 @@ $(document).ready(function() {
       setTimeout(function () {
       $(".section-1").animate({opacity:1}, 1000);
       $(".subbtn-container").animate({opacity:1}, 3000);
-						$(".firebaseui-auth-container").animate({opacity:1}, 3000);
-
+            setTimeout(function () {
+                $('.auth-login').animate({opacity:1}, 1000);
+                setTimeout(function () {
+                $('.test-email').animate({opacity:1}, 1000)
+                    }, 100);
+                }, 500);
       }, 500);
   }, 1000);
 
@@ -94,5 +98,3 @@ $(document).ready(function() {
     }
   });
 });
-
-
