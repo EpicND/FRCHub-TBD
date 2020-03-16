@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Tomorrow&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+/*<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">*/
+
+html {
+   margin: 0px;
+   height: 100%;
+   width: 100%;
+}
+
+body {
+   background-color: var(--main-bg-color);
+   margin: 0px;
+   min-height: 100%;
+   width: 100%;
+/*    overflow: hidden;*/
+}
+
+.inline-centering {
+    text-align: center !important;
+}
+
+.team-number {
+    color: var(--main-txt-color) ;
+    font-size: var(--team-name-fs);
+    font-family: 'Raleway', sans-serif;
+}
+
+.team-name {
+    width:auto;
+  color:var(--main-txt-color);
+  font-size: var(--header-fs);
+  font-family: 'Tomorrow', sans-serif;
+  color: var(--main-txt-color);
+}
+
+.main-header {
+    height:var(--header-height);
+    background-color: var(--header-bg-color);
+}
+.team-info {
+    width:var(--pxnt-width-info);
+    float:left;
+    height:auto;
+    flex-grow:1;
+}
+
+hr {
+    mix-blend-mode: difference;
+}
+
+.logo-container {
+    margin-top:var(--logo-container-margin-top);
+    width:var(--pxnt-width-logo);
+    float:left;
+    flex-grow:1;
+}
+
+.social-media-box {
+    display:flex;
+    margin-top: 10px;
+}
+
+.github, .twitter, .instagram, .facebook, .website {
+    flex-grow:1;
+    color: var(--main-txt-color);
+}
+
+.github {
+    background-color: black;
+}
+
+.twitter {
+    background-color:#00acee;
+    color:black;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.instagram {
+    color:white;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
+.website {
+    background-color:black;
+}
+
+.logo {
+/*    NOTE: DO not adjust this with dark mode as the logos are mad to work with a white background*/
+    margin-left:auto;
+    margin-right: auto;
+    border: 2px solid gray;
+    background-color:white;
+    height: 80px;
+    width: 80px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+img {
+/*    CHANGE THE FACT THAT IT SAYS IMG HERE, if the word padding is on the next line send a photo of this to neev*/
+    padding:10px;
+    height:60px;
+    width:60px;
+}
+
+.OSH {
+    opacity: 0;
+}
+
+.years-active {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 2vw;
+    color: var(--main-txt-color);
+}
+
+.team-location {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 1.5vw;
+    color: var(--secondary-txt-color);
+}
+
+.account-info {
+    width:100%;
+    display:flex;
+    overflow: hidden;
+    white-space: no-wrap;
+}
+
+
+:root {
+    --header-height:40px;
+    --main-bg-color: #0e1111;
+    --header-bg-color: #313639;
+    --team-name-fs: 2em;
+    --header-fs: 5vw;
+    --main-txt-color: white;
+    --pxnt-width-info: 75%;
+    --pxnt-width-logo: 25%;
+    --logo-container-margin-top: 10px;
+    --secondary-txt-color: #7d7d7d;
+}
