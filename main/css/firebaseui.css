@@ -44,7 +44,7 @@
 }
 
 .mdl-button.mdl-button--colored {
-    color: #3f51b5
+    color: #3f51b5;
 }
 
 .mdl-button.mdl-button--colored:focus:not(:active) {

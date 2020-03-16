@@ -307,3 +307,36 @@ form {
 .email:hover {
     text-decoration: underline;
 }
+
+
+/* //////////
+   ||Header||
+   |||Code|||
+   //////////
+*/
+/* Style the header with a grey background and some padding */
+* {margin:0;padding:0}
+
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    z-index: 10000;
+    transition: all 0.2s ease-in-out;
+    height: auto;
+    background-color:transparent;  
+    
+    text-align: center;
+    line-height: 40px;
+}
+
+.header.active {
+    background: #fff;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}

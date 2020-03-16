@@ -9,6 +9,7 @@ function startup() {
 
 $(document).ready(function() {
   // $(".title-container").hide();
+    
   $(".title-container").animate({opacity:1}, 1000);
   setTimeout(function () {
     $(".subheading-container").animate({opacity:1}, 1000);
@@ -97,4 +98,14 @@ $(document).ready(function() {
         .removeClass("filled");
     }
   });
+});
+
+//Change header color when scrolling
+$(window).on("scroll", function() {
+    if($(window).scrollTop() > 50) {
+        $(".header").addClass("active");
+    } else {
+        //remove the background property so it comes transparent again (defined in your css)
+       $(".header").removeClass("active");
+    }
 });

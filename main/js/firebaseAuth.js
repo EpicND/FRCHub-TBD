@@ -23,6 +23,7 @@ var uiConfig = {
     firebase.auth.EmailAuthProvider.PROVIDER_ID,
     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
     firebase.auth.GithubAuthProvider.PROVIDER_ID,
+//    firebase.auth.AnonymousAuthProvider.PROVIDER_ID
   ],
   // Terms of service url.
   tosUrl: '<your-tos-url>',
@@ -35,6 +36,16 @@ firebase.auth().onAuthStateChanged(function(user) {
       console.log("Successfully signed in with email " + user.email)
       document.getElementById('email').innerHTML = "Signed in as " + user.email;
       ui.stop();
+         setTimeout(function () {
+      $(".section-1").animate({opacity:1}, 1000);
+      $(".subbtn-container").animate({opacity:1}, 3000);
+            setTimeout(function () {
+
+                setTimeout(function () {
+                $('.test-email').animate({opacity:1}, 1000)
+                    }, 100);
+                }, 500);
+      }, 500);
   } else {
     // No user is signed in.
       document.getElementById('email').innerHTML = "No user Signed In"
