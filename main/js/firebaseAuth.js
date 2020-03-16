@@ -35,7 +35,9 @@ firebase.auth().onAuthStateChanged(function(user) {
     // User is signed in.
       console.log("Successfully signed in with email " + user.email)
       document.getElementById('email').innerHTML = "Signed in as " + user.email;
-      ui.stop();
+             $(".section-1").show();
+       $(".subbtn-container").show();
+      
          setTimeout(function () {
       $(".section-1").animate({opacity:1}, 1000);
       $(".subbtn-container").animate({opacity:1}, 3000);

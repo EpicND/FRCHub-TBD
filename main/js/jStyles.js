@@ -5,27 +5,49 @@ function startup() {
   $(".load-container").hide();
 		$('.firebaseui-auth-container').hide();
   $('.loader').hide();
+    
+    
 }
 
 $(document).ready(function() {
+       $(".section-1").show();
+       $(".subbtn-container").show();
   // $(".title-container").hide();
-    
-  $(".title-container").animate({opacity:1}, 1000);
+      $(".title-container").animate({opacity:1}, 1000);
   setTimeout(function () {
     $(".subheading-container").animate({opacity:1}, 1000);
-      setTimeout(function () {
+ 
+  }, 1000);
+   firebase.auth().onAuthStateChanged(function(user) {
+  if (user) { 
+
+     setTimeout(function () {
       $(".section-1").animate({opacity:1}, 1000);
       $(".subbtn-container").animate({opacity:1}, 3000);
-            setTimeout(function () {
+ 
+      }, 1500);
+  } else {
+      $(".section-1").hide();
+       $(".subbtn-container").hide();
+       setTimeout(function () {
                 $('.auth-login').animate({opacity:1}, 1000);
                 setTimeout(function () {
                 $('.test-email').animate({opacity:1}, 1000)
-                    }, 100);
-                }, 500);
-      }, 500);
-  }, 1000);
-
+                    }, 1000);
+                }, 1500);
+      
+  }
+   } )
 });
+
+////
+//           setTimeout(function () {
+//                $('.auth-login').animate({opacity:1}, 1000);
+//                setTimeout(function () {
+//                $('.test-email').animate({opacity:1}, 1000)
+//                    }, 1000);
+//                }, 1500);
+////
 
 function checkFilled() {
    if($('.input-3').val().length > 0) {
