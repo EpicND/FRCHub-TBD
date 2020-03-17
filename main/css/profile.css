@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Tomorrow&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 /*<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">*/
 
 html {
@@ -18,6 +21,30 @@ body {
 
 .inline-centering {
     text-align: center !important;
+}
+
+.post-year {
+    font-size:5em;
+    color: var(--main-txt-color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.post {
+    background-color:var(--tertiary-txt-color);
+    margin-top: 15%;
+    margin-bottom:15%;
+    height:70%;
+    width:70%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid white;
+    transition: 0.3s;
+}
+
+.post:hover {
+    background-color: 	#696969;
 }
 
 .team-number {
@@ -43,6 +70,13 @@ body {
     float:left;
     height:auto;
     flex-grow:1;
+}
+
+.num-awards {
+    color:white;
+    font-size: 1em;
+    margin-top:var(--logo-container-margin-top);
+    font-family: 'Baloo Chettan 2', cursive;
 }
 
 hr {
@@ -88,6 +122,9 @@ hr {
     background-color:black;
 }
 
+
+
+
 .logo {
 /*    NOTE: DO not adjust this with dark mode as the logos are mad to work with a white background*/
     margin-left:auto;
@@ -132,6 +169,16 @@ img {
     white-space: no-wrap;
 }
 
+.row {
+    display:flex;
+}
+
+.season-ind {
+    flex-grow:1;
+/*    border: 2px solid red;*/
+    height:25vw;
+}
+
 
 :root {
     --header-height:40px;
@@ -144,4 +191,5 @@ img {
     --pxnt-width-logo: 25%;
     --logo-container-margin-top: 10px;
     --secondary-txt-color: #7d7d7d;
+    --tertiary-txt-color: #313639;
 }
