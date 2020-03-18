@@ -18,6 +18,8 @@ body {
    width: 100%;
 }
 
+/* html, body { margin: 0; padding: 0; width: 100%; } */
+
 footer, .copyright-container {
  position: absolute;
  bottom: 0;
@@ -43,21 +45,24 @@ footer, .copyright-container {
 .accimg {
     height: 40px;
     width:auto;
+    
 }
 
 :root {
     --header-height:60px;
-    --header-bg-color: #313639;
+    --header-bg-color: #313639
+        
 }
 
 .title-container {
-    margin-top:20vh;
+/*    margin-top:10vh;*/
   width:100%;
 }
 
 .subbtn-container {
   width:100%;
-    margin-bottom: 50px;
+/*    margin-bottom: 100px;*/
+    display:block;
 }
 
 .firebaseui-tos {
@@ -71,7 +76,9 @@ footer, .copyright-container {
   font-weight: bold;
 }
 
-
+.blank-space {
+    height:50px;
+}
 
 .subheading-container {
   width:100%;
@@ -397,7 +404,7 @@ form {
   overflow: hidden;
   background-color: #333;
   font-family: Arial;
-    height:50px;
+    height:51.67px;
 }
 
 /* Links inside the navbar */
