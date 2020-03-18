@@ -25,19 +25,34 @@ footer, .copyright-container {
 }
 /* CLASSES */
 
+#login-box {
+    display:none;
+}
+
 .title {
   font-size: 15vw;
   font-family: 'Tomorrow', sans-serif;
   color:white;
 }
 
+.main-header {
+    height:var(--header-height);
+    background-color: var(--header-bg-color);
+}
+
+:root {
+    --header-height:60px;
+    --header-bg-color: #313639;
+}
+
 .title-container {
-    margin-top:30vh;
+    margin-top:20vh;
   width:100%;
 }
 
 .subbtn-container {
   width:100%;
+    margin-bottom: 50px;
 }
 
 .firebaseui-tos {
@@ -73,6 +88,36 @@ footer, .copyright-container {
   opacity: 0;
 }
 
+
+
+.myButton {
+	box-shadow: 0px 10px 14px -7px #3e7327;
+	background:linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+	background-color:#77b55a;
+	border-radius:4px;
+	border:1px solid #4b8f29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 12px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #5b8a3c;
+    float:right;
+    margin-top:27px;
+    margin-right:20px;
+}
+
+.myButton:hover {
+	background:linear-gradient(to bottom, #72b352 5%, #77b55a 100%);
+	background-color:#72b352;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
 
 body {
   width:100%;

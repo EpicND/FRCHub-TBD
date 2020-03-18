@@ -8,12 +8,15 @@ $(document).ready(function() {
             $(".years-active").animate({opacity:1}, 500);
             $(".team-location").animate({opacity:1}, 500);
             $(".social-media-box").animate({opacity:1}, 500);
+            setTimeout(function () {
+                $(".season-info").animate({opacity:1}, 500);
+            }, 250);
             }, 250);
                }, 250);
 });
 
 //var div = $('.post');
-makeTextRight();
+//makeTextRight();
 function makeTextRight() {
     setTimeout(function() {
    // Get the current height of the div and save it as a variable.
@@ -24,7 +27,7 @@ function makeTextRight() {
       'font-size': (height/2.4) + 'px',
 //      'line-height': height + 'px'
    })
-    }, 100);
+    }, 1);
 }
 
 $(window).resize(function () {

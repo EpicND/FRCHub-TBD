@@ -1,6 +1,6 @@
 //SWITCH OUT FROM USING XML REQUESTS
 var PIO;
-getProfileInformation("frc2264");
+
 function getProfileInformation(teamNumber) {
     var fff = "https://www.thebluealliance.com/api/v3/team/"+ teamNumber + "/simple?X-TBA-Auth-Key=lrqZK0XAvSpeHXuWi9vhbmnAbF4ueBRQB3OevJC1pOWIWQdwX1WKRJ4oQceP0ox5";
         let ok = new URL(fff);
@@ -85,15 +85,68 @@ function getProfileInformation(teamNumber) {
             } else {
                 $(".years-active").html("Competed from " + myJson[0] + " - " + lastYear);
             }
-            var numberLeft = myJson.length;
-            for(var y = 0; y< myJson.length; y++) {
-                console.log(numberLeft);
-                numberLeft--;
-//                console.log(numberLeft);
-                console.log(myJson[numberLeft]);
-                if(numberLeft == 0) {
+//            var numberLeft = myJson.length;
+            $(".season-info").empty();
+            for(var y = myJson.length -1; y>-1; ) {
+//                console.log("row created from" + myJson[y-1] + myJson[y-4]);
+                var row = document.createElement('div');
+                row.classList.toggle("row");
+                for(c = 0; c<4; c++) { 
+                    if(myJson[y] == undefined) {
+                        var indBox = document.createElement('div');
+                        indBox.classList.toggle("season-ind");
+                        indBox.classList.toggle("OSH");
+                        var post = document.createElement('div');
+                        post.classList.toggle("post");
+                        post.classList.toggle("inline-centering");
+                        for(u=0; u<2; u++) {
+                            var a = document.createElement('a');
+                            a.classList.toggle("post-year");
+                            post.appendChild(a);
+                            a.innerHTML = " 20 ";
+                        }
+                        indBox.appendChild(post);
+                        row.appendChild(indBox);
+                        
+                    } else {
+                        
+                        var indBox = document.createElement('div');
+                        indBox.classList.toggle("season-ind");
+                        var post = document.createElement('div');
+                        post.classList.toggle("post");
+                        post.classList.toggle("inline-centering");
+//                        for(u=0; u<2; u++) {
+                            var a = document.createElement('a');
+                            a.classList.toggle("post-year");
+                            post.appendChild(a);
+//                            console.log(myJson[y].toString());
+                            a.innerHTML = "   " + myJson[y].toString().substring(0,2) + "   ";
+                            var a = document.createElement('a');
+                            a.classList.toggle("post-year");
+                            post.appendChild(a);
+//                            console.log(myJson[y].toString());
+                            a.innerHTML = "   " + myJson[y].toString().substring(2,4) + "   ";
+//                        }
+                        indBox.appendChild(post);
+                        row.appendChild(indBox);
+                        
+                    }
+                    y--;
                     
                 }
+                
+                
+                var box = document.getElementById('season-info');
+                box.appendChild(row);
+
+//              
             }
+            makeTextRight();
         });
 }
+
+
+let params = new URLSearchParams(document.location.search.substring(1))
+let name = params.get("teamID"); 
+//console.log(name);
+getProfileInformation("frc" + name);

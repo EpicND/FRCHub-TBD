@@ -89,6 +89,20 @@ teamNameRequest.onload = function() {
 
 }
 
+//closeForm();
+var t = 0;
+    function openForm() {
+        if(t==0) {
+        document.getElementById("login-box").style.display = "block";
+            t=1;
+        } else {
+            document.getElementById("login-box").style.display = "none";
+            t = 0;
+        }
+}
+function closeForm() {
+        document.getElementById("login-box").style.display = "none";
+}
 
 
 
@@ -117,11 +131,11 @@ $(document).ready(function() {
 });
 
 //Change header color when scrolling
-$(window).on("scroll", function() {
-    if($(window).scrollTop() > 50) {
-        $(".header").addClass("active");
-    } else {
-        //remove the background property so it comes transparent again (defined in your css)
-       $(".header").removeClass("active");
-    }
-});
+//$(window).on("scroll", function() {
+//    if($(window).scrollTop() > 50) {
+//        $(".header").addClass("active");
+//    } else {
+//        //remove the background property so it comes transparent again (defined in your css)
+//       $(".header").removeClass("active");
+//    }
+//});

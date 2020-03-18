@@ -34,21 +34,14 @@
     <script src='https://code.jquery.com/jquery-3.3.1.js'></script>
     <script src="main/js/jStyles.js"></script>
     <script src="main/js/firebaseAuth.js"></script>
+    <script src="main/js/params.js"></script>
 </head>
-<!--
-    <header>
-    <div class="header">
-  <a href="#default" class="logo">CompanyLogo</a>
-  <div class="header-right">
- 
-  </div>
-</div>
-    </header>
--->
+
 <body>
 
-    <!--        <div class="load-container">-->
-
+    <div class="main-header">
+<!--        <a class="myButton" onClick="openForm()">Login</a>-->
+    </div>
     <div class="title-container OSH inline-centering">
         <a class="title"> Scoultimate </a>
     </div>
@@ -70,20 +63,20 @@
     </section>
 
     <div class="subbtn-container inline-centering OSH">
-        <input type="button" id="adj-button" value="Skip">
+        <input type="button" id="adj-button" value="Skip" onClick="directLink()">
     </div>
-
-    <div class="test-email inline-centering OSH">
-        <a onclick="signOut()"><h4 class="email" id="email"></h4></a>
+    <div id="login-box">
+        <div class="test-email inline-centering OSH">
+            <a onclick="signOut()"><h4 class="email" id="email"></h4></a>
+        </div>
+        <div class="auth-login OSH"id="firebaseui-auth-container"></div>
+        <div id="loader"></div>
     </div>
-    <div class="auth-login OSH"id="firebaseui-auth-container"></div>
-    <div id="loader"></div>
-
     <div class="copyright-container inline-centering">
         <footer class="copyright"> © Neev Mangal and Dhairya Gupta, Trojan Robotics 2264
             <br> Art by Sai Shinde </footer>
     </div>
-    <!--        </div>-->
+
 
 </body>
 
