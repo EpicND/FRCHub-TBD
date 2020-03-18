@@ -40,6 +40,11 @@ footer, .copyright-container {
     background-color: var(--header-bg-color);
 }
 
+.accimg {
+    height: 40px;
+    width:auto;
+}
+
 :root {
     --header-height:60px;
     --header-bg-color: #313639;
@@ -392,6 +397,7 @@ form {
   overflow: hidden;
   background-color: #333;
   font-family: Arial;
+    height:50px;
 }
 
 /* Links inside the navbar */
@@ -411,20 +417,25 @@ form {
 }
 
 /* Dropdown button */
-.dropdown .dropbtn {
+.dropdown{
   font-size: 16px;
   border: none;
   outline: none;
   color: white;
-  padding: 14px 16px;
+  padding: 4px 16px;
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
 }
 
 /* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover, .dropdown:hover{
   background-color: red;
+}
+
+.full-height {
+    height:100%;
+    width:auto;
 }
 
 /* Dropdown content (hidden by default) */
