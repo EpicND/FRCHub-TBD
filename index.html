@@ -44,10 +44,26 @@
 </head>
 
 <body>
-
-    <div class="main-header">
-<!--        <a class="myButton" onClick="openForm()">Login</a>-->
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <div class="dropdown">
+    <button class="dropbtn">Login
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="test-email inline-centering OSH">
+            <a onclick="signOut()"><h4 class="email" id="email"></h4></a>
+        </div>
+     <div class="auth-login OSH"id="firebaseui-auth-container"></div>
+        <div id="loader"></div>
     </div>
+  </div>
+</div>
+<!--
+    <div class="main-header">
+        
+    </div>
+-->
     <div class="title-container OSH inline-centering">
         <a class="title"> Scoultimate </a>
     </div>
@@ -72,11 +88,8 @@
         <input type="button" id="adj-button" value="Skip" onClick="directLink()">
     </div>
     <div id="login-box">
-        <div class="test-email inline-centering OSH">
-            <a onclick="signOut()"><h4 class="email" id="email"></h4></a>
-        </div>
-        <div class="auth-login OSH"id="firebaseui-auth-container"></div>
-        <div id="loader"></div>
+      
+   
     </div>
     <div class="copyright-container inline-centering">
         <footer class="copyright"> © Neev Mangal and Dhairya Gupta, Trojan Robotics 2264

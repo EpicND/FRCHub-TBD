@@ -32,7 +32,7 @@ $(document).ready(function() {
 //      $(".section-1").hide();
 //       $(".subbtn-container").hide();
        setTimeout(function () {
-                $('.auth-login').animate({opacity:1}, 1000);
+                $('.auth-login').animate({opacity:1}, 1);
                 setTimeout(function () {
                 $('.test-email').animate({opacity:1}, 1000)
                     }, 1000);
