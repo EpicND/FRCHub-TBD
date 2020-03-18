@@ -118,14 +118,15 @@ function getProfileInformation(teamNumber) {
 //                        for(u=0; u<2; u++) {
                             var a = document.createElement('a');
                             a.classList.toggle("post-year");
+                            a.classList.toggle("fw");
                             post.appendChild(a);
 //                            console.log(myJson[y].toString());
-                            a.innerHTML = "   " + myJson[y].toString().substring(0,2) + "   ";
+                            a.innerHTML = "    " + myJson[y].toString().substring(0,2) + "    ";
                             var a = document.createElement('a');
                             a.classList.toggle("post-year");
                             post.appendChild(a);
 //                            console.log(myJson[y].toString());
-                            a.innerHTML = "   " + myJson[y].toString().substring(2,4) + "   ";
+                            a.innerHTML = "    " + myJson[y].toString().substring(2,4) + "    ";
 //                        }
                         indBox.appendChild(post);
                         row.appendChild(indBox);

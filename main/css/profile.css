@@ -29,7 +29,9 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-
+.fw {
+    width:100%;
+}
 
 .post {
     background-color:var(--tertiary-txt-color);
