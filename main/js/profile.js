@@ -64,7 +64,7 @@ function getProfileInformation(teamNumber) {
             }
             for(var awardIndex = 0; awardIndex < myJson.length; awardIndex++) { 
                 if(myJson[awardIndex].award_type == 0) {
-                    console.log("Chainmens Award Winner");
+//                    console.log("Chainmens Award Winner");
                     $('.logo').css('border', '2px solid gold');
                 }
                    }
@@ -117,6 +117,7 @@ function getProfileInformation(teamNumber) {
                         var post = document.createElement('div');
                         post.classList.toggle("post");
                         post.classList.toggle("inline-centering");
+                        post.setAttribute("onclick", "getPost("+ myJson[y] + ")");
 //                        for(u=0; u<2; u++) {
                             var a = document.createElement('a');
                             a.classList.toggle("post-year");
@@ -152,7 +153,11 @@ function getProfileInformation(teamNumber) {
         });
 }
 
+function getPost(year) {
+    console.log(year);
+      window.location.href = 'post.html'+'?postID=' + year;
 
+}
 let params = new URLSearchParams(document.location.search.substring(1))
 let name = params.get("teamID"); 
 //console.log(name);

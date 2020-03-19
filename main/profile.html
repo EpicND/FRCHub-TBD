@@ -8,7 +8,21 @@
         <script src="js/pfjStyles.js"></script>
     </head>
     <body>
-        <div class="main-header"> </div>
+        <div class="navbar">
+    
+  <a class="full-height" href="index.html">Home</a>
+  <div class="dropdown">
+    <img src="media/images/account-placeholder.png" class="accimg dropbtn"></img>
+    <div class="dropdown-content">
+      <div class="test-email inline-centering OSH">
+            <a onclick="signOut()"><h4 class="email" id="email"></h4></a>
+        </div>
+     <div class="auth-login OSH"id="firebaseui-auth-container"></div>
+        <div id="loader"></div>
+    </div>
+  </div>
+</div>
+<!--        <div class="main-header"> </div>-->
         
         <div class="account-info" id="account-info">
             <div class="logo-container">
