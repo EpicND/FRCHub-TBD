@@ -31,6 +31,8 @@ function getProfileInformation(teamNumber) {
                 var lastLogo = logoCont.lastChild;  
                 logoCont.removeChild(lastLogo);
                 //ADD A DEFAULT LOGO
+                logo.src = "media/images/account-placeholder.png"
+                logoCont.appendChild(logo);
             } else { 
             logo.src = 'data:image/png;base64,' + myJson[0].details.base64Image;
             var logoCont = document.getElementById('logo');
