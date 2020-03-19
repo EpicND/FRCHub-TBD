@@ -155,7 +155,7 @@ function getProfileInformation(teamNumber) {
 
 function getPost(year) {
     console.log(year);
-      window.location.href = 'post.html'+'?postID=' + year;
+      window.location.href = 'post.html'+'?postID=' + year + '&teamID=' + name;
 
 }
 let params = new URLSearchParams(document.location.search.substring(1))
