@@ -2,8 +2,18 @@ let params = new URLSearchParams(document.location.search.substring(1))
 let year = params.get("postID"); 
 let name = params.get("teamID"); 
 console.log(name);
+window.onload = function(){
+var a = document.getElementById("title");
+ document.getElementById("title").innerHTML = "Team " + name + "'s " + year + " season";
+//a.classList.toggle("heloo");
+};
+
+
 
 function getVideo(teamNumber, teamYear) { 
+    
+//    a.innerHTML = "Team " + name + "'s " + year + " season";
+
 let eee = "https://www.thebluealliance.com/api/v3/team/"+ teamNumber + "/media/" + teamYear + "?X-TBA-Auth-Key=lrqZK0XAvSpeHXuWi9vhbmnAbF4ueBRQB3OevJC1pOWIWQdwX1WKRJ4oQceP0ox5";
         let okj = new URL(eee);
 

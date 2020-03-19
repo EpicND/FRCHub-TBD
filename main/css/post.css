@@ -9,6 +9,7 @@ body {
    margin: 0px;
    min-height: 100%;
    width: 100%;
+/*    overflow: hidden;*/
 }
 
 .inline-centering {
@@ -20,4 +21,32 @@ body {
     margin-right: auto;
     margin-left: auto;
 
+}
+
+#title {
+    width:100%;
+    font-size: 2em;
+}
+
+a {
+    color: var(--main-txt-color);
+}
+
+.fullW {
+    width:100%;
+}
+
+
+:root {
+    --header-height:40px;
+    --main-bg-color: #0e1111;
+    --header-bg-color: #313639;
+    --team-name-fs: 2em;
+    --header-fs: 5vw;
+    --main-txt-color: white;
+    --pxnt-width-info: 75%;
+    --pxnt-width-logo: 25%;
+    --logo-container-margin-top: 10px;
+    --secondary-txt-color: #7d7d7d;
+    --tertiary-txt-color: #313639;
 }
