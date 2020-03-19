@@ -14,3 +14,10 @@ body {
 .inline-centering {
     text-align: center;
 }
+
+.center-vids {
+        width:100%;
+    margin-right: auto;
+    margin-left: auto;
+
+}

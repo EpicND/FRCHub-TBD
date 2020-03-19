@@ -25,6 +25,7 @@ function getProfileInformation(teamNumber) {
           .then((myJson) => {
 //    console.log(myJson);
             var logo = new Image();
+            console.log(myJson);
 //            FIX IT SO THAT IT CHECKS FOR THE LOGO NOT JUST THE FIRST PHOTO
             if( myJson[0] == undefined) {
                 var logoCont = document.getElementById('logo');
