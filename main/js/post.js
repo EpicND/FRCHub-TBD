@@ -36,6 +36,72 @@ let eee = "https://www.thebluealliance.com/api/v3/team/"+ teamNumber + "/media/"
         });
 }
 
+function getAwards(teamNumber, teamYear) {
+             let ddd = "https://www.thebluealliance.com/api/v3/team/"+ teamNumber + "/awards/" + teamYear +"?X-TBA-Auth-Key=lrqZK0XAvSpeHXuWi9vhbmnAbF4ueBRQB3OevJC1pOWIWQdwX1WKRJ4oQceP0ox5";
+        let okk = new URL(ddd);
+
+        fetch(okk)
+          .then((response) => {
+            return response.json();
+          })
+          .then((myJson) => {
+            console.log(myJson);
+            var awardDiv = document.getElementById("numAwards");
+            if(myJson.length == 1) {
+                awardDiv.innerHTML = "In " + teamYear + ", team " + name + " won " + myJson.length + " award";
+            } else { 
+            awardDiv.innerHTML= "In " + teamYear + ", team " + name + " won " + myJson.length + " awards";
+            }
+            
+            
+            $(".awardList").empty();
+            for(var y = myJson.length; y>-1; ) {
+                console.log(y);
+                var row = document.createElement('div');
+                row.classList.toggle("row");
+                for(c = 0; c<4; c++) { 
+
+                        
+                        var indBox = document.createElement('div');
+                        indBox.classList.toggle("season-ind");
+                        var post = document.createElement('div');
+                        post.classList.toggle("post");
+                        post.classList.toggle("inline-centering");
+
+
+                            var a = document.createElement('a');
+                            a.classList.toggle("post-year");
+                            a.classList.toggle("fw");
+                            post.appendChild(a);
+
+                            var a = document.createElement('a');
+                            a.classList.toggle("post-year");
+                            var br = document.createElement("br");
+                            post.appendChild(br);
+                            post.appendChild(a);
+                            
+                      indBox.appendChild(post);
+                        row.appendChild(indBox);
+                       
+                    }
+                    y=y-4; 
+                    
+                }
+                
+                
+                var box = document.getElementById('awardList');
+                box.appendChild(row);
+
+//              
+            });
+//            makeTextRight();
+        
+
+}
+
+
+
+
 function getId(url) {
     const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
     const match = url.match(regExp);
@@ -50,4 +116,5 @@ function getId(url) {
 
 
 getVideo("frc" + name, year);
+getAwards("frc" + name, year);
 //document.getElementById("myImg").src = "";

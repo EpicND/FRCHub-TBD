@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Tomorrow&display=swap');
+
+
 html {
    margin: 0px;
 /*
@@ -28,9 +31,18 @@ body {
 
 }
 
-#title {
+#title, #numAwards {
     width:100%;
     font-size: 2em;
+        font-family: 'Tomorrow', sans-serif;
+    color: var(--main-txt-color);
+}
+
+#numAwards {
+        width:100%;
+    font-size: 1.5em;
+        font-family: 'Tomorrow', sans-serif;
+    color: var(--main-txt-color);
 }
 
 a {
