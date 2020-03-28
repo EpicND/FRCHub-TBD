@@ -1,7 +1,7 @@
 let params = new URLSearchParams(document.location.search.substring(1))
 let year = params.get("postID"); 
 let name = params.get("teamID"); 
-console.log(name);
+//console.log(name);
 window.onload = function(){
 var a = document.getElementById("title");
  document.getElementById("title").innerHTML = "Team " + name + "'s " + year + " season";
@@ -25,7 +25,7 @@ let eee = "https://www.thebluealliance.com/api/v3/team/"+ teamNumber + "/media/"
             console.log(myJson);
             for(p=0; p<myJson.length; p++) { 
                 if(myJson[p].type == "youtube") { 
-                    console.log("https://youtube.com/embed/" + getId(myJson[p].view_url));
+//                    console.log("https://youtube.com/embed/" + getId(myJson[p].view_url));
                    var viddiv = document.getElementById('vids');
                     var video = document.createElement('iframe');
                     viddiv.appendChild(video);
@@ -45,7 +45,7 @@ function getAwards(teamNumber, teamYear) {
             return response.json();
           })
           .then((myJson) => {
-            console.log(myJson);
+//            console.log(myJson);
             var awardDiv = document.getElementById("numAwards");
             if(myJson.length == 1) {
                 awardDiv.innerHTML = "In " + teamYear + ", team " + name + " won " + myJson.length + " award";
@@ -55,13 +55,16 @@ function getAwards(teamNumber, teamYear) {
             
             
             $(".awardList").empty();
-            for(var y = myJson.length; y>-1; ) {
-                console.log(y);
+            
+            for(var v = myJson.length; v>0; ) {
+                
+                
+//                console.log(y);
                 var row = document.createElement('div');
                 row.classList.toggle("row");
                 for(c = 0; c<4; c++) { 
 
-                        
+                        console.log("indbox created");
                         var indBox = document.createElement('div');
                         indBox.classList.toggle("season-ind");
                         var post = document.createElement('div');
@@ -73,24 +76,42 @@ function getAwards(teamNumber, teamYear) {
                             a.classList.toggle("post-year");
                             a.classList.toggle("fw");
                             post.appendChild(a);
-
-                            var a = document.createElement('a');
-                            a.classList.toggle("post-year");
+                            
+                    
                             var br = document.createElement("br");
                             post.appendChild(br);
-                            post.appendChild(a);
+                    
+                            var b = document.createElement('a');
+                            b.classList.toggle("post-year");
+                            b.classList.toggle("fw");
+                            b.classList.toggle("bf");
+                            post.appendChild(b);
                             
                       indBox.appendChild(post);
                         row.appendChild(indBox);
-                       
-                    }
-                    y=y-4; 
                     
-                }
+                        if(myJson[myJson.length - v] == undefined) {
+                            indBox.classList.add("OSH");
+                        } else {
+                            if(myJson[myJson.length - v].award_type == 0) {
+                                post.classList.toggle("gold");
+                                a.classList.toggle('black');
+                                b.classList.toggle('black');
+                            }
+                            a.innerHTML = myJson[myJson.length -v].name;
+                            b.innerHTML= myJson[myJson.length -v].event_key;
+                        }
+                       
+                           
+                           v = v-1;
+                    }
+                    
+                
                 
                 
                 var box = document.getElementById('awardList');
                 box.appendChild(row);
+            }
 
 //              
             });

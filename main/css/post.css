@@ -13,11 +13,7 @@ body {
    background-color: var(--main-bg-color);
 
    margin: 0px;
-    /*
-   min-height: 100%;
-   width: 100%;
-*/
-/*    overflow: hidden;*/
+
 }
 
 .inline-centering {
@@ -38,7 +34,7 @@ body {
     color: var(--main-txt-color);
 }
 
-#numAwards {
+#numAwards, #titleMedia {
         width:100%;
     font-size: 1.5em;
         font-family: 'Tomorrow', sans-serif;
@@ -49,8 +45,16 @@ a {
     color: var(--main-txt-color);
 }
 
+.bf {
+    float
+}
+
 .fullW {
     width:100%;
+}
+
+.post-year {
+    font-size: 1em !important;
 }
 
 .header {
@@ -111,6 +115,11 @@ a {
   margin: 0; /* Important for vertical align on mobile phones */
 }
 
+.gold {
+    background-color:gold !important;
+    text-color: var(--main-bg-color:);
+}
+
 /* Add a red background color to navbar links on hover */
 .navbar a:hover, .dropdown:hover{
   background-color: red;
@@ -121,6 +130,9 @@ a {
     width:auto;
 }
 
+.black {
+    color: black !important;
+}
 /* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
