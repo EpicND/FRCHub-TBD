@@ -1,3 +1,5 @@
+var isTeam = false;
+
 
 window.onload = startup();
 
@@ -43,14 +45,17 @@ $(document).ready(function() {
 });
 
 
+
 function checkFilled() {
    if($('.input-3').val().length > 0) {
      var teamEntered = teamNameArray[teamNumberArray.indexOf(parseInt($('.input-3').val()))];
      if(teamEntered == undefined) {
         document.getElementById("adj-button").value = "That's not a team >:(";
+        isTeam = false;
         $("#adj-button").addClass("expanded");
      } else {
        document.getElementById("adj-button").value="My team is " + teamEntered;
+       isTeam = true;
        $("#adj-button").addClass("expanded");
     }
    } else {

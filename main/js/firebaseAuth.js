@@ -31,6 +31,7 @@ var uiConfig = {
   privacyPolicyUrl: '<your-privacy-policy-url>'
 };
 firebase.auth().onAuthStateChanged(function(user) {
+    
   if (user) {
     // User is signed in.
       console.log("Successfully signed in with email " + user.email)
@@ -57,4 +58,10 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 function signOut() {
     auth.signOut();
+}
+
+
+function openCloseHeader() {
+
+
 }

@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title value=""> </title>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-auth.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDyqWMuRtuH6p9f0dfne6XkBlV3wszJKMo",
+            authDomain: "scoultimate.firebaseapp.com",
+            databaseURL: "https://scoultimate.firebaseio.com",
+            projectId: "scoultimate",
+            storageBucket: "scoultimate.appspot.com",
+            messagingSenderId: "640701949151",
+            appId: "1:640701949151:web:925d5001cfd2251481f56a",
+            measurementId: "G-BGM4E4GB1B"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+        <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="css/firebaseui.css" />
+        <script src="js/firebaseAuth.js"></script>
+        <script src="js/firebaseDatabase.js"></script>
         <script src='https://code.jquery.com/jquery-3.3.1.js'></script>
         <link href="css/profile.css"rel="stylesheet"/>
         <script src="js/profile.js"></script>
         <script src="js/pfjStyles.js"></script>
-        
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="js/jStyles.js"></script>
     </head>
     <body>
         <div class="navbar">
     
-  <a class="full-height" href="index.html">Home</a>
+  <a class="full-height" href="/index.html">Home</a>
   <div class="dropdown">
-    <img src="media/images/account-placeholder.png" class="accimg dropbtn"></img>
+    <img src="media/images/account-placeholder.png" class="accimg dropbtn">
     <div class="dropdown-content">
       <div class="test-email inline-centering OSH">
             <a onclick="signOut()"><h4 class="email" id="email"></h4></a>
@@ -38,11 +67,11 @@
                 <div class="years-active inline-centering OSH"> </div>
                 <div class="team-location inline-centering OSH"> </div>
                 <div class="social-media-box OSH"> 
-                    <button class="inline-centering github"> Github </button>
-                    <button class="inline-centering twitter"> Twitter </button>
-                    <button class="inline-centering instagram"> Instagram </button>
-                    <button class="inline-centering facebook"> Facebook </button>
-                    <button class="inline-centering website"> Website </button>
+                    <button class="inline-centering github" id="github"> Github </button>
+                    <button class="inline-centering twitter" id="twitter"> Twitter </button>
+                    <button class="inline-centering instagram" id="instagram"> Instagram </button>
+                    <button class="inline-centering facebook" id="facebook"> Facebook </button>
+                    <button class="inline-centering website" id="teamWebsite"> Website </button>
                 </div>
             </div>
             
